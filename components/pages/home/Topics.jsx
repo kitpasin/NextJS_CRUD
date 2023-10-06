@@ -5,11 +5,7 @@ import DeleteTopic from "./DeleteTopic";
 
 async function getTopics() {
   try {
-    const response = await axios.get("http://localhost:3000/api/topics", {
-      headers: {
-        "Cache-Control": "no-store",
-      },
-    });
+    const response = await axios.get("http://localhost:3000/api/topics");
     return response.data;
   } catch (error) {
     console.log("Error loading topics : ", error);
